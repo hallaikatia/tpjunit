@@ -21,7 +21,7 @@ public class Operation {
 
     public float division() {
         if (y != 0) return (float) x / y;
-        throw new ArithmeticException();
+        throw new ArithmeticException("division par 0");
     }
 
 }

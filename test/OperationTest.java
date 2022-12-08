@@ -31,14 +31,19 @@ class OperationTest {
     }
 
     @Test
-    @Disabled
     void divisionPar0() {
         Operation operation = new Operation(1,0);
-        Throwable exception = assertThrows(ArithmeticException.class, () -> {
+
+        Exception exception = assertThrows(ArithmeticException.class, () -> {
             operation.division();
         });
 
-
+        String expectedMessage = ("division par 0");
+        String actualMessage = exception.getMessage();
+        assertTrue(actualMessage.contains(expectedMessage));
     }
+
+
+    
 
 }

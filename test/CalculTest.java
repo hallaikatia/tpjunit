@@ -31,7 +31,6 @@ class CalculTest {
 
 
     @Test
-    @Disabled
     @DisplayName("Division par 0")
     void divisionPar0() {
         Calcul c = new Calcul();
