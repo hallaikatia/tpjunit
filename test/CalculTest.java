@@ -35,10 +35,15 @@ class CalculTest {
     @DisplayName("Division par 0")
     void divisionPar0() {
         Calcul c = new Calcul();
-        Throwable e = assertThrows(IllegalArgumentException.class, () -> {
-            c.division(8, 0);
-        });
-        assertTrue(e.getMessage().contains("division par 0"));
 
-}
+        Exception exception = assertThrows(ArithmeticException.class, () -> {
+                c.division(8, 0);
+            });
+
+        String expectedMessage = ("division par 0");
+        String actualMessage = exception.getMessage();
+        assertTrue(actualMessage.contains(expectedMessage));
+        }
+
+
 }

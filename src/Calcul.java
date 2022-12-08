@@ -7,7 +7,7 @@ public class Calcul {
 
     public float division(int x , int y) {
         if (y != 0) return (float) x / y;
-        throw new ArithmeticException();
+        throw new ArithmeticException("division par 0");
     }
 
 
